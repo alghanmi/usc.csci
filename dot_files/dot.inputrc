@@ -1,0 +1,30 @@
+# See http://cnswww.cns.cwru.edu/php/chet/readline/rluserman.html#SEC9
+# for more information on .inputrc
+set show-all-if-ambiguous on
+set bell-style visible
+
+# Enable Unicode I/O
+"\C-x\C-r": re-read-init-file
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Mapping Home/End keys
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
+# Mapping Delete/Insert keys
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+
+# Mappings for Ctrl/Shift/Alt left-arrow and right-arrow for word moving
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[1;6D": backward-word
+"\e[1;6C": forward-word
+"\e[1;9D": backward-word
+"\e[1;9C": forward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
