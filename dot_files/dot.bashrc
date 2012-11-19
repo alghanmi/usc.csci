@@ -13,6 +13,9 @@
 # ones you do not
 
 
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 ##
 ## IMPORTANT System Variables
 ##
@@ -48,15 +51,21 @@ source_defaults;
 ##
 
 ## Applications that are not in default path
+source_if_read /usr/usc/curl/default/setup.sh
+source_if_read /usr/usc/doxygen/default/setup.sh
 source_if_read /usr/usc/emacs/new/setup.sh
 source_if_read /usr/usc/git/default/setup.sh
 source_if_read /usr/usc/jdk/1.6.0_23/setup.sh
 source_if_read /usr/usc/math/default/setup.sh
 source_if_read /usr/usc/matlab/2009b/setup.sh
 source_if_read /usr/usc/python/new/setup.sh
+source_if_read /usr/usc/qt/4.8.2/setup.sh
 source_if_read /usr/usc/subversion/1.6.9/setup.sh
 source_if_read /usr/usc/tex/default/setup.sh
+source_if_read /usr/usc/vim/default/setup.sh
 source_if_read /usr/usc/vnc/default/setup.sh
+
+
 
 ## Fix Keybindings in INPUTRC
 export INPUTRC=$HOME/.inputrc
